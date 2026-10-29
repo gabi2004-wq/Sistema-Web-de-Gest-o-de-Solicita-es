@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestão de Solicitações</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Gestão de Solicitações</h1>
+        <p>Painel de controle administrativo</p>
+    </header>
+
+    <main>
+
+        <section class="indicadores">
+            <div class="card">
+                <h3>Total de solicitações</h3>
+                <p id="total">0</p>
+            </div>
+
+            <div class="card">
+                <h3>Alta prioridade</h3>
+                <p id="alta">0</p>
+            </div>
+
+            <div class="card">
+                <h3>Pendentes</h3>
+                <p id="pendentes">0</p>
+            </div>
+        </section>
+
+        <section class="formulario">
+            <h2>Nova solicitação</h2>
+
+            <form id="formSolicitacao">
+                <input
+                    type="text"
+                    id="titulo"
+                    placeholder="Título da solicitação"
+                    required
+                >
+
+                <textarea
+                    id="descricao"
+                    placeholder="Descreva a solicitação"
+                    required
+                ></textarea>
+
+                <select id="prioridade">
+                    <option value="Baixa">Baixa prioridade</option>
+                    <option value="Normal">Prioridade normal</option>
+                    <option value="Alta">Alta prioridade</option>
+                </select>
+
+                <button type="submit">Cadastrar solicitação</button>
+            </form>
+        </section>
+
+        <section class="lista">
+            <h2>Solicitações cadastradas</h2>
+
+            <input
+                type="search"
+                id="pesquisa"
+                placeholder="Pesquisar solicitação..."
+            >
+
+            <div id="listaSolicitacoes"></div>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
